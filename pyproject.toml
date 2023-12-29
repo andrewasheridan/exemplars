@@ -1,0 +1,47 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[tool.poetry]
+name = "exemplars"
+version = "0.1.0"
+description = ""
+authors = ["Andrew Sheridan <andrewasheridan@gmail.com>"]
+readme = "README.md"
+packages = [{include = "exemplars", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+litestar = "^2.4.5"
+
+[tool.poetry.group.dev.dependencies]
+setuptools = "^69.0.3"
+ruff = "^0.1.9"
+pre-commit = "^3.6.0"
+mypy = "^1.8.0"
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+fix = true
+target-version = "py312"
+src = ["app", "test"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+unfixable = []
+extend-select = ["D", "I"]
+extend-ignore = ["D203", "D212"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["incrementum_api"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
