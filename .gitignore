@@ -3,3 +3,4 @@
 .mypy_cache
 .ruff_cache
 poetry.lock
+node_modules
