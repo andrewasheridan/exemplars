@@ -8,7 +8,7 @@ strict = true
 
 [tool.poetry]
 name = "exemplars"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Andrew Sheridan <andrewasheridan@gmail.com>"]
 readme = "README.md"
